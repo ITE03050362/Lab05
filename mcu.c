@@ -1,4 +1,3 @@
-
 #include<stdio.h>
 #include<sys/socket.h>
 #include<arpa/inet.h> //inet_addr
@@ -12,7 +11,7 @@ if (socket_desc == -1)
 {
 printf("Could not create socket");
 }
-server.sin_addr.s_addr = inet_addr("120.96.81.61");
+server.sin_addr.s_addr = inet_addr("127.0.0.1");
 server.sin_family = AF_INET;
 server.sin_port = htons( 89 );
 //Connect to remote server
@@ -24,3 +23,5 @@ return 1;
 puts("Connected");
 return 0;
 }
+
+
